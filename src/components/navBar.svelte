@@ -146,7 +146,7 @@ style="background-color: #F5F5E9;"
     <!-- Backdrop -->
     <div
       role="presentation"
-      class="absolute inset-0 bg-black bg-opacity-25 transition-opacity duration-300"
+      class="absolute inset-0 bg-black/50 bg-opacity-25 transition-opacity duration-300"
       style="opacity: {isOpen ? 1 : 0};"
       on:click={closeMenu}
       on:keydown={e => e.key === 'Escape' && closeMenu()}
@@ -159,10 +159,10 @@ style="background-color: #F5F5E9;"
     >
       <div class="p-5">
         <div class="flex items-center justify-between mb-8">
-          <h2 class="text-lg font-semibold text-gray-900">Menu</h2>
+          <h2 class="text-lg font-semibold text-[#2E7D32]">Menu</h2>
           <button
             on:click={closeMenu}
-            class="p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+            class="p-2 text-[#2E7D32] hover:text-gray-900 focus:outline-none"
           >
             <span class="sr-only">Close menu</span>
             <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -180,7 +180,7 @@ style="background-color: #F5F5E9;"
             <a
               href="#{section.toLowerCase()}"
               on:click={() => scrollToSection(`#${section.toLowerCase()}`)}
-              class="block px-4 py-2 text-gray-700 hover:bg-[#77C381] hover:text-white rounded-md transition-all duration-200 transform"
+              class="block px-4 py-2 text-[#2E7D32] hover:bg-[#77C381] hover:text-white rounded-md transition-all duration-200 transform"
               style="opacity: {isOpen ? 1 : 0}; transform: translateX({isOpen ? '0' : '20px'}); transition-delay: {i * 75}ms"
             >
               {section}

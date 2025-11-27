@@ -28,17 +28,17 @@
 
 <section
   id="about"
-  class="w-full bg-gradient-to-b from-white to-green-50/30 py-16 md:py-24"
+  class="w-full bg-linear-to-b from-white to-green-50/30 py-16 md:py-24"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       <!-- Left placeholder area -->
       <div
-        class="w-full h-64 md:h-80 lg:h-96 rounded-2xl border-2 border-[#77C381]/30 shadow-lg bg-gradient-to-br from-[#77C381]/20 via-white to-[#2E7D32]/10"
+        class="w-full h-64 md:h-80 lg:h-96 rounded-2xl border-2 border-[#77C381]/30 shadow-lg bg-linear-to-br from-[#77C381]/20 via-white to-[#2E7D32]/10"
         aria-hidden="true"
       >
         <!-- Decorative pattern overlay -->
-        <div class="w-full h-full rounded-2xl opacity-10 bg-[length:20px_20px]" 
+        <div class="w-full h-full rounded-2xl opacity-10 bg-size[20px_20px]" 
              style="background-image: radial-gradient(circle, #2E7D32 1px, transparent 1px);">
         </div>
       </div>
@@ -54,7 +54,7 @@
             <div class="flex items-start gap-3">
               <div class="w-1 h-8 bg-[#2E7D32] rounded-full mt-1" aria-hidden="true"></div>
               <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-                About Kodumbidi Latex
+                About Kodumpidy Latex
               </h2>
             </div>
 
