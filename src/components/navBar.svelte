@@ -1,6 +1,7 @@
 <script>
-  import { onMount } from 'svelte';
-    import logo from '$lib/assets/KlLatexFavi.png';
+
+import { onMount } from 'svelte';
+import logo from '$lib/assets/KlLatexFavi.png';
   let isOpen = false;
   let isScrolled = false;
   let heroHeight = 0;
@@ -50,11 +51,12 @@
 </script>
 
 <nav
-  class="fixed top-0 w-full z-50 transition-all duration-300"
-  class:bg-[#77C381]={isScrolled}
-  class:shadow-md={isScrolled}
-style="background-color: #F5F5E9;"
-
+  class="fixed top-0 w-full z-50 transition-all duration-500"
+  class:backdrop-blur-md={true}
+  class:shadow-lg={isScrolled}
+  class:border-b={isScrolled}
+  class:border-emerald-100={isScrolled}
+  style="background-color: {isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.95)'}"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center h-16">
@@ -68,7 +70,9 @@ style="background-color: #F5F5E9;"
           <img 
             src={logo} 
             alt="Kodumpidy Latex" 
-            class="h-10 md:h-10 w-auto"
+            width="50"
+            height="50"
+            class="h-12 md:h-14 w-auto"
             style="filter: brightness(1.1);"
           />
         </a>
@@ -79,21 +83,21 @@ style="background-color: #F5F5E9;"
         <a
           href="#about"
           on:click={() => scrollToSection('#about')}
-          class="text-[#2E7D32] hover:text-[#77C381] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+          class="text-gray-700 hover:text-emerald-600 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-emerald-50"
         >
           About
         </a>
         <a
           href="#services"
           on:click={() => scrollToSection('#services')}
-          class="text-[#2E7D32] hover:text-[#77C381] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+          class="text-gray-700 hover:text-emerald-600 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-emerald-50"
         >
           Services
         </a>
         <a
           href="#contact"
           on:click={() => scrollToSection('#contact')}
-          class="text-[#2E7D32] hover:text-[#77C381] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+          class="bg-emerald-600 text-white hover:bg-emerald-700 px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
         >
           Contact
         </a>
@@ -159,10 +163,10 @@ style="background-color: #F5F5E9;"
     >
       <div class="p-5">
         <div class="flex items-center justify-between mb-8">
-          <h2 class="text-lg font-semibold text-[#2E7D32]">Menu</h2>
+          <h2 class="text-lg font-bold text-gray-800">Menu</h2>
           <button
             on:click={closeMenu}
-            class="p-2 text-[#2E7D32] hover:text-gray-900 focus:outline-none"
+            class="p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
           >
             <span class="sr-only">Close menu</span>
             <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -180,7 +184,7 @@ style="background-color: #F5F5E9;"
             <a
               href="#{section.toLowerCase()}"
               on:click={() => scrollToSection(`#${section.toLowerCase()}`)}
-              class="block px-4 py-2 text-[#2E7D32] hover:bg-[#77C381] hover:text-white rounded-md transition-all duration-200 transform"
+              class="block px-4 py-3 text-gray-700 hover:bg-emerald-600 hover:text-white rounded-lg transition-all duration-200 transform font-semibold"
               style="opacity: {isOpen ? 1 : 0}; transform: translateX({isOpen ? '0' : '20px'}); transition-delay: {i * 75}ms"
             >
               {section}

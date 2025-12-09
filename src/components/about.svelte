@@ -28,19 +28,21 @@
 
 <section
   id="about"
-  class="w-full bg-linear-to-b from-white to-green-50/30 py-16 md:py-24"
+  class="w-full bg-linear-to-b from-gray-50 to-white py-20 md:py-32"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       <!-- Left placeholder area -->
       <div
-        class="w-full h-64 md:h-80 lg:h-96 rounded-2xl border-2 border-[#77C381]/30 shadow-lg bg-linear-to-br from-[#77C381]/20 via-white to-[#2E7D32]/10"
+        class="w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl bg-linear-to-br from-emerald-500 via-emerald-600 to-teal-700 relative"
         aria-hidden="true"
       >
         <!-- Decorative pattern overlay -->
-        <div class="w-full h-full rounded-2xl opacity-10 bg-size[20px_20px]" 
-             style="background-image: radial-gradient(circle, #2E7D32 1px, transparent 1px);">
+        <div class="w-full h-full rounded-3xl opacity-20" 
+             style="background-image: radial-gradient(circle, white 1.5px, transparent 1.5px); background-size: 30px 30px;">
         </div>
+        <!-- Gradient overlay for depth -->
+        <div class="absolute inset-0 bg-linear-to-tr from-black/20 to-transparent"></div>
       </div>
 
       <!-- Right content area -->
@@ -51,44 +53,44 @@
             class="space-y-6"
           >
             <!-- Heading with left accent -->
-            <div class="flex items-start gap-3">
-              <div class="w-1 h-8 bg-[#2E7D32] rounded-full mt-1" aria-hidden="true"></div>
-              <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            <div class="flex items-start gap-4">
+              <div class="w-1.5 h-12 bg-linear-to-b from-emerald-600 to-emerald-400 rounded-full mt-1 shadow-md" aria-hidden="true"></div>
+              <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
                 About Kodumpidy Latex
               </h2>
             </div>
 
             <!-- Badge -->
-            <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#77C381]/20 border border-[#2E7D32]/30 shadow-sm">
-              <span class="text-sm font-semibold text-[#2E7D32]">
+            <div class="inline-flex items-center px-5 py-2.5 rounded-full bg-emerald-50 border-2 border-emerald-200 shadow-sm">
+              <span class="text-sm font-bold text-emerald-700">
                 38+ Years of Service
               </span>
             </div>
 
             <!-- Content paragraphs -->
-            <div class="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed">
+            <div class="space-y-5 text-gray-700 text-base md:text-lg leading-relaxed">
               <p>
-                Founded in 1988, Kodumbidi Latex began with a simple mission to create a 
-                <span class="font-semibold text-[#77C381]">reliable and transparent</span> 
+                Founded in 1988, Kodumpidy Latex began with a simple mission to create a 
+                <span class="font-bold text-emerald-600">reliable and transparent</span> 
                 latex trading system for rubber farmers in and around Kadanad Panchayat. 
                 Over the past 
-                <span class="font-semibold text-[#77C381]">38 years (1988 to 2025)</span>, 
+                <span class="font-bold text-emerald-600">38 years (1988 to 2025)</span>, 
                 we have grown into a 
-                <span class="font-semibold text-[#77C381]">trusted institution</span>, 
-                operating from our base at Thachampurath Buildings, Thachampura – Kodumbidi, 
-                on the Kollappalli–Melukkavu Road.
+                <span class="font-bold text-emerald-600">trusted institution</span>, 
+                operating from our base at Thachampurath Buildings,Kodumpidy 
+                on the Kollapally–Melukavu Road.
               </p>
 
               <p>
                 As the only 
-                <span class="font-semibold text-[#77C381]">Rubber Board licensed</span> 
+                <span class="font-bold text-emerald-600">Rubber Board licensed</span> 
                 latex institution in Kadanad Panchayat, we follow all standards and guidelines 
                 set by the Rubber Board of India. Our focus has always been to ensure 
-                <span class="font-semibold text-[#77C381]">fair value</span> 
+                <span class="font-bold text-emerald-600">fair value</span> 
                 for every farmer through 
-                <span class="font-semibold text-[#77C381]">transparent dealings</span>, 
+                <span class="font-bold text-emerald-600">transparent dealings</span>, 
                 accurate 
-                <span class="font-semibold text-[#77C381]">DRC based assessments</span>, 
+                <span class="font-bold text-emerald-600">DRC based assessments</span>, 
                 and consistent service.
               </p>
             </div>

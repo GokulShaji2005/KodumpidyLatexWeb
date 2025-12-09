@@ -76,13 +76,13 @@
 
 <section 
   id="services"
-  class="relative py-16 md:py-24 bg-linear-to-b from-white via-green-50/30 to-white overflow-hidden"
+  class="relative py-20 md:py-32 bg-white overflow-hidden"
   use:handleIntersection
 >
-  <!-- Decorative background elements -->
-  <div class="absolute inset-0 opacity-5 pointer-events-none">
-    <div class="absolute top-10 left-10 w-72 h-72 bg-[#77C381] rounded-full blur-3xl"></div>
-    <div class="absolute bottom-10 right-10 w-96 h-96 bg-[#2E7D32] rounded-full blur-3xl"></div>
+  <!-- Decorative background elements with fixed dimensions to prevent layout shift -->
+  <div class="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
+    <div class="absolute top-10 left-10 w-72 h-72 bg-emerald-500 rounded-full blur-3xl will-change-auto"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-600 rounded-full blur-3xl will-change-auto"></div>
   </div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -90,11 +90,11 @@
       <!-- Section Header -->
       <div 
         in:fade="{{ duration: 800, delay: 100 }}"
-        class="text-center mb-12 md:mb-16"
+        class="text-center mb-16 md:mb-20"
       >
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full 
-                   bg-[#77C381]/10 border border-[#77C381]/30 
-                   text-[#2E7D32] text-sm font-semibold mb-4">
+        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full 
+                   bg-emerald-50 border-2 border-emerald-200 
+                   text-emerald-700 text-sm font-bold mb-6 shadow-sm">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
             <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
@@ -103,63 +103,63 @@
         </div>
         
         <h2 
-          class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4
+          class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6
                  tracking-tight"
         >
           What We Offer
         </h2>
         
-        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Fair, transparent, and farmer-first services designed to ensure your success
         </p>
       </div>
 
       <!-- Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 ">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {#each offers as offer, i}
           <div
             in:fly="{{ y: 40, duration: 600, delay: offer.delay, easing: cubicOut }}"
-            class="group relative bg-white rounded-2xl p-6 md:p-8
-                   border-2 border-gray-100 hover:border-[#77C381]/50
-                   shadow-lg hover:shadow-2xl
-                   transition-all duration-300 transform hover:-translate-y-2
+            class="group relative bg-white rounded-2xl p-8
+                   border-2 border-gray-200 hover:border-emerald-400
+                   shadow-xl hover:shadow-2xl
+                   transition-all duration-500 transform hover:-translate-y-3
                    overflow-hidden"
           >
             <!-- Card gradient background on hover -->
-            <div class="absolute inset-0 bg-linear-to-br from-[#77C381]/5 via-white to-[#2E7D32]/5 
-                       opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+            <div class="absolute inset-0 bg-linear-to-br from-emerald-50 via-white to-teal-50 
+                       opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl">
             </div>
 
             <!-- Content -->
             <div class="relative z-10">
               <!-- Icon and Badge Container -->
-              <div class="flex items-start justify-between mb-4">
-                <div class="p-3 bg-linear-to-br from-[#77C381]/20 to-[#2E7D32]/20 
-                           rounded-xl text-[#2E7D32]
-                           group-hover:scale-110 transition-transform duration-300">
+              <div class="flex items-start justify-between mb-6">
+                <div class="p-4 bg-linear-to-br from-emerald-100 to-emerald-50 
+                           rounded-2xl text-emerald-700
+                           group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
                   {@html offer.icon}
                 </div>
                 
-                <span class="px-3 py-1 text-xs font-bold rounded-full
-                           bg-[#2E7D32] text-white shadow-md">
+                <span class="px-3 py-1.5 text-xs font-bold rounded-full uppercase tracking-wide
+                           bg-emerald-600 text-white shadow-lg group-hover:shadow-xl">
                   {offer.badge}
                 </span>
               </div>
 
               <!-- Title -->
-              <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3
-                       group-hover:text-[#2E7D32] transition-colors duration-300">
+              <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4
+                       leading-tight group-hover:text-emerald-700 transition-colors duration-300">
                 {offer.title}
               </h3>
 
               <!-- Description -->
-              <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+              <p class="text-gray-600 leading-relaxed text-base">
                 {offer.description}
               </p>
 
               <!-- Decorative bottom accent -->
-              <div class="mt-6 pt-6 border-t border-gray-100">
-                <div class="flex items-center text-[#2E7D32] font-semibold text-sm
+              <div class="mt-6 pt-6 border-t-2 border-gray-100 group-hover:border-emerald-200">
+                <div class="flex items-center text-emerald-600 font-bold text-sm
                            group-hover:translate-x-2 transition-transform duration-300">
                   <!-- <span>Learn more</span> -->
                   <!-- <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -170,8 +170,8 @@
             </div>
 
             <!-- Decorative corner element -->
-            <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-[#77C381]/10 rounded-full
-                       transform group-hover:scale-150 transition-transform duration-500">
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-100 rounded-full
+                       transform group-hover:scale-150 transition-transform duration-500 opacity-0 group-hover:opacity-100">
             </div>
           </div>
         {/each}
