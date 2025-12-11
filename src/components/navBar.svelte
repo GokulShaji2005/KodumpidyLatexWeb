@@ -51,7 +51,7 @@ import logo from '$lib/assets/KlLatexFavi.png';
 </script>
 
 <nav
-  class="fixed top-0 w-full z-50 transition-all duration-500"
+  class="fixed top-0 w-full transition-all duration-500 z-50"
   class:backdrop-blur-md={true}
   class:shadow-lg={isScrolled}
   class:border-b={isScrolled}
@@ -101,22 +101,15 @@ import logo from '$lib/assets/KlLatexFavi.png';
         >
           Contact
         </a>
-        <!-- <a
-          href="#learn-more"
-          on:click={() => scrollToSection('#learn-more')}
-          class="text-[#2E7D32] hover:text-[#77C381] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-        >
-          Learn More
-        </a> -->
       </div>
 
       <!-- Mobile Menu Button -->
-      <div class="md:hidden">
+      <!-- <div class="md:hidden relative z-50">
         <button
           on:click={toggleMenu}
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
-          class="p-2 rounded-md text-[#2E7D32] hover:text-[#77C381] focus:outline-none focus:ring-2 focus:ring-white"
+          class="p-2 rounded-md text-emerald-600 hover:text-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         >
           <div class="w-6 h-6 relative flex items-center justify-center">
             <span
@@ -137,30 +130,75 @@ import logo from '$lib/assets/KlLatexFavi.png';
             ></span>
           </div>
         </button>
-      </div>
+      </div> -->
+
+      <div class="md:hidden relative z-50">
+  <button
+    on:click={toggleMenu}
+    aria-label="Toggle navigation menu"
+    aria-expanded={isOpen}
+    class="p-2 rounded-md text-emerald-600 hover:text-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+  >
+    <div class="w-6 h-6 relative">
+
+      <!-- Top bar -->
+      <span
+        class="absolute left-0 w-5 h-0.5 bg-current transition-all duration-500 ease-in-out"
+        style="
+          top: {isOpen ? '10px' : '4px'};
+          transform: translateX({isOpen ? '2px' : '0'}) rotate({isOpen ? '45deg' : '0deg'});
+        "
+      ></span>
+
+      <!-- Middle bar -->
+      <span
+        class="absolute left-0 w-5 h-0.5 bg-current transition-all duration-500 ease-in-out"
+        style="
+          opacity: {isOpen ? 0 : 1};
+          top: 12px;
+          transform: translateX({isOpen ? '6px' : '0'});
+        "
+      ></span>
+
+      <!-- Bottom bar -->
+      <span
+        class="absolute left-0 w-5 h-0.5 bg-current transition-all duration-500 ease-in-out"
+        style="
+          top: {isOpen ? '10px' : '20px'};
+          transform: translateX({isOpen ? '2px' : '0'}) rotate({isOpen ? '-45deg' : '0deg'});
+        "
+      ></span>
+
+    </div>
+  </button>
+</div>
+
     </div>
   </div>
 
   <!-- Mobile Menu Panel -->
-  <div
-    aria-hidden={!isOpen}
-    class="md:hidden fixed inset-0 overflow-hidden"
-    style="pointer-events: {isOpen ? 'auto' : 'none'};"
-  >
-    <!-- Backdrop -->
-    <div
-      role="presentation"
-      class="absolute inset-0 bg-black/50 bg-opacity-25 transition-opacity duration-300"
-      style="opacity: {isOpen ? 1 : 0};"
-      on:click={closeMenu}
-      on:keydown={e => e.key === 'Escape' && closeMenu()}
-    ></div>
+  
+</nav>
 
-    <!-- Panel -->
-    <div
-      class="absolute top-0 right-0 w-64 h-full bg-white transform transition-transform duration-300 ease-in-out"
-      style="transform: translateX({isOpen ? '0' : '100%'});"
-    >
+{#if isOpen}
+<div
+  class="md:hidden fixed inset-0"
+  style="z-index: 9999; top: 0; left: 0; right: 0; bottom: 0;"
+>
+  <!-- Backdrop -->
+  <div
+    role="presentation"
+    class="absolute inset-0 bg-black/60
+      transition-opacity duration-500"
+    on:click={closeMenu}
+    on:keydown={e => e.key === 'Escape' && closeMenu()}
+  ></div>
+
+  <!-- Panel -->
+  <div
+    class="absolute top-0 right-0 w-64 h-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out"
+    style="z-index: 10000;"
+  >
       <div class="p-5">
         <div class="flex items-center justify-between mb-8">
           <h2 class="text-lg font-bold text-gray-800">Menu</h2>
@@ -180,12 +218,11 @@ import logo from '$lib/assets/KlLatexFavi.png';
         </div>
         
         <nav class="space-y-3">
-          {#each ['About', 'Services', 'Contact'] as section, i}
+          {#each ['About', 'Services', 'Contact'] as section}
             <a
               href="#{section.toLowerCase()}"
               on:click={() => scrollToSection(`#${section.toLowerCase()}`)}
-              class="block px-4 py-3 text-gray-700 hover:bg-emerald-600 hover:text-white rounded-lg transition-all duration-200 transform font-semibold"
-              style="opacity: {isOpen ? 1 : 0}; transform: translateX({isOpen ? '0' : '20px'}); transition-delay: {i * 75}ms"
+              class="block px-4 py-3 text-gray-700 hover:bg-emerald-600 hover:text-white rounded-lg transition-all duration-200 font-semibold"
             >
               {section}
             </a>
@@ -194,4 +231,4 @@ import logo from '$lib/assets/KlLatexFavi.png';
       </div>
     </div>
   </div>
-</nav>
+{/if}

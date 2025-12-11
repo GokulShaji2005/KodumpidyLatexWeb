@@ -7,8 +7,11 @@
   import Footer from '../components/footer.svelte';
   import FloatingActions from '../components/floatingActions.svelte';
 </script>
+
+
+ 
 <main>
-  <NavBar />
+ <NavBar />
 <HeroSection />
 <About />
 <Offer />
