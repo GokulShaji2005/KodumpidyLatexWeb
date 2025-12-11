@@ -180,55 +180,57 @@ import logo from '$lib/assets/KlLatexFavi.png';
   
 </nav>
 
-{#if isOpen}
 <div
-  class="md:hidden fixed inset-0"
-  style="z-index: 9999; top: 0; left: 0; right: 0; bottom: 0;"
+  class="md:hidden fixed inset-0 pointer-events-none"
+  style="z-index: 9999;"
 >
+
   <!-- Backdrop -->
   <div
-    role="presentation"
-    class="absolute inset-0 bg-black/60
-      transition-opacity duration-500"
+    class="absolute inset-0 bg-black/60 transition-opacity duration-500"
+    style="opacity: {isOpen ? 1 : 0}; pointer-events: {isOpen ? 'auto' : 'none'};"
     on:click={closeMenu}
-    on:keydown={e => e.key === 'Escape' && closeMenu()}
   ></div>
 
-  <!-- Panel -->
+  <!-- Sliding Panel -->
   <div
-    class="absolute top-0 right-0 w-64 h-full bg-white shadow-2xl transform transition-transform duration-300 ease-in-out"
-    style="z-index: 10000;"
+    class="absolute top-0 right-0 w-64 h-full bg-white shadow-2xl transition-transform duration-500 ease-in-out"
+    style="
+      transform: translateX({isOpen ? '0' : '100%'});
+      pointer-events: auto;
+      z-index: 10000;
+    "
   >
-      <div class="p-5">
-        <div class="flex items-center justify-between mb-8">
-          <h2 class="text-lg font-bold text-gray-800">Menu</h2>
-          <button
-            on:click={closeMenu}
-            class="p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
-          >
-            <span class="sr-only">Close menu</span>
-            <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-        
-        <nav class="space-y-3">
-          {#each ['About', 'Services', 'Contact'] as section}
-            <a
-              href="#{section.toLowerCase()}"
-              on:click={() => scrollToSection(`#${section.toLowerCase()}`)}
-              class="block px-4 py-3 text-gray-700 hover:bg-emerald-600 hover:text-white rounded-lg transition-all duration-200 font-semibold"
-            >
-              {section}
-            </a>
-          {/each}
-        </nav>
+    <div class="p-5">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-lg font-bold text-gray-800">Menu</h2>
+        <button
+          on:click={closeMenu}
+          class="p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+        >
+          <span class="sr-only">Close menu</span>
+          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
+      
+      <nav class="space-y-3">
+        {#each ['About', 'Services', 'Contact'] as section}
+          <a
+            href="#{section.toLowerCase()}"
+            on:click={() => scrollToSection(`#${section.toLowerCase()}`)}
+            class="block px-4 py-3 text-gray-700 hover:bg-emerald-600 hover:text-white rounded-lg transition-all duration-300 font-semibold"
+          >
+            {section}
+          </a>
+        {/each}
+      </nav>
     </div>
   </div>
-{/if}
+
+</div>
