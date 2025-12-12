@@ -59,7 +59,7 @@
 
   // Company contact information
   const contactInfo = {
-    address: 'Thachampurath Buildings,Kodumpoidy, Kollappally–Melukkavu Road, Kadanad Panchayat, Kerala',
+    address: 'Thachampurath Buildings, Kodumpidy, Kollappally–Melukkavu Road, Kadanad Panchayat, Kerala',
     phone: '+91 9745694494',
     email: 'kodumpidylatex@gmail.com',
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0!2d76.5!3d10.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDMwJzAwLjAiTiA3NsKwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin'
@@ -124,7 +124,7 @@
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
-                  title="Kodumbidi Latex Location"
+                  title="Kodumpidy Latex Location"
                   class="w-full h-full"
                 ></iframe>
               </div>

@@ -186,6 +186,8 @@ import logo from '$lib/assets/KlLatexFavi.png';
 >
 
   <!-- Backdrop -->
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
     class="absolute inset-0 bg-black/60 transition-opacity duration-500"
     style="opacity: {isOpen ? 1 : 0}; pointer-events: {isOpen ? 'auto' : 'none'};"

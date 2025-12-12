@@ -49,7 +49,7 @@
     {
       step: "5",
       title: "Final Payment",
-      description: "Remaining 25% settled",
+      description: "Remaining 25% settled after DRC check",
       icon: "✅",
       date: "3rd & 18th",
       benefit: "Complete Settlement"
@@ -78,7 +78,7 @@
           class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-2 leading-tight"
           style="text-shadow: 0 4px 20px rgba(0,0,0,0.4);"
         >
-          Kodumbidi Latex
+          Kodumpidy Latex
         </h1>
         <p 
           class="text-xs md:text-base text-emerald-50 font-light mb-3 md:mb-4"
@@ -236,7 +236,7 @@
                  hover:bg-emerald-600 hover:text-white transition-all duration-300
                  shadow-2xl hover:shadow-emerald-400/60 transform hover:scale-105
                  focus:outline-none focus:ring-4 focus:ring-emerald-300 focus:ring-offset-2"
-          aria-label="Learn more about Kodumbidi Latex services"
+          aria-label="Learn more about Kodumpidy Latex services"
         >
           Learn More About Us
           <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

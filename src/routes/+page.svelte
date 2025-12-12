@@ -9,14 +9,17 @@
 </script>
 
 
- 
-<main>
- <NavBar />
-<HeroSection />
-<About />
-<Offer />
-<Location />
-<Footer />
-<FloatingActions />
+
+<header>
+  <NavBar />
+</header>
+
+<main id="main-content">
+  <HeroSection />
+  <About />
+  <Offer />
+  <Location />
+  <Footer />
+  <FloatingActions />
   <!-- <h2>Welcome to our site!</h2> -->
 </main>
