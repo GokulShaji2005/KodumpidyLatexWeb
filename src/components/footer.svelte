@@ -155,12 +155,7 @@
           </li>
         </ul>
 
-        <!-- Business Hours -->
-        <!-- <div class="mt-6 p-4 bg-white/5 rounded-lg border border-white/10">
-          <p class="text-xs font-semibold text-white/90 mb-1">Business Hours</p>
-          <p class="text-xs text-white/70">Mon - Sat: 8:00 AM - 6:00 PM</p>
-          <p class="text-xs text-white/70">Sunday: Closed</p>
-        </div> -->
+    
       </div>
     </div>
 

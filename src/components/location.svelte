@@ -61,8 +61,9 @@
   const contactInfo = {
     address: 'Thachampurath Buildings, Kodumpidy, Kollappally–Melukkavu Road, Kadanad Panchayat, Kerala',
     phone: '+91 9745694494',
+    phone2: '+91 9048090366',
     email: 'kodumpidylatex@gmail.com',
-    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0!2d76.5!3d10.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDMwJzAwLjAiTiA3NsKwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin'
+    mapUrl:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.3656425492863!2d76.7183531!3d9.775779499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07cfcb55e01863%3A0x570abe70743f35f2!2sKodumpidy%20Latex!5e1!3m2!1sen!2sin!4v1765508265018!5m2!1sen!2sin"
   };
 </script>
 
@@ -187,7 +188,12 @@
                      class="text-emerald-600 hover:text-emerald-700 font-semibold text-lg transition-colors">
                     {contactInfo.phone}
                   </a>
-                  <p class="text-gray-500 text-sm mt-1">Mon-Sat: 8:00 AM - 6:00 PM</p>
+                  <p></p>
+                    <a href="tel:{contactInfo.phone2}" 
+                     class="text-emerald-600 hover:text-emerald-700 font-semibold text-lg transition-colors">
+                    {contactInfo.phone2}
+                  </a>
+                  
                 </div>
               </div>
             </div>
@@ -214,67 +220,12 @@
               </div>
             </div>
 
-            <!-- Business Hours Card -->
-            <!-- <div class="bg-linear-to from-emerald-500 to-emerald-600 rounded-2xl p-6 shadow-xl text-white">
-              <div class="flex items-start gap-4">
-                <div class="shrink-0 p-3 bg-white/20 backdrop-blur-sm rounded-xl">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div class="flex-1">
-                  <h4 class="font-bold text-white mb-3 text-lg">Business Hours</h4>
-                  <div class="space-y-2 text-sm">
-                    <div class="flex justify-between">
-                      <span class="text-white/90">Monday - Saturday</span>
-                      <span class="font-semibold">8:00 AM - 6:00 PM</span>
-                    </div>
-                    <div class="flex justify-between">
-                      <span class="text-white/90">Sunday</span>
-                      <span class="font-semibold">Closed</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+         
           </div>
 
-          <!-- Quick Action Buttons -->
-          <!-- <div class="grid grid-cols-2 gap-4 pt-4">
-            <a
-              href="tel:{contactInfo.phone}"
-              class="flex items-center justify-center gap-2 px-6 py-4 
-                     bg-emerald-600 text-white rounded-xl font-semibold
-                     hover:bg-emerald-700 transition-all duration-300
-                     shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call Now
-            </a>
-            <a
-              href="mailto:{contactInfo.email}"
-              class="flex items-center justify-center gap-2 px-6 py-4 
-                     bg-white text-emerald-600 border-2 border-emerald-600 rounded-xl font-semibold
-                     hover:bg-emerald-50 transition-all duration-300
-                     shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Email Us
-            </a>
-          </div> -->
+        
         </div>
       </div>
     {/if}
   </div>
 </section>
-
-<!-- <style>
-  /* Smooth focus transitions */
-  input:focus, textarea:focus {
-    outline: none;
-  }
-</style> -->

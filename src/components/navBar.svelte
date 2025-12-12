@@ -103,34 +103,7 @@ import logo from '$lib/assets/KlLatexFavi.png';
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <!-- <div class="md:hidden relative z-50">
-        <button
-          on:click={toggleMenu}
-          aria-label="Toggle navigation menu"
-          aria-expanded={isOpen}
-          class="p-2 rounded-md text-emerald-600 hover:text-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-        >
-          <div class="w-6 h-6 relative flex items-center justify-center">
-            <span
-              class="absolute w-5 h-0.5 bg-current transform transition-all duration-300 ease-in-out"
-              class:rotate-45={isOpen}
-              class:translate-y-0={isOpen}
-              style="transform: translateY({isOpen ? '0' : '-8px'}) {isOpen ? 'rotate(45deg)' : ''}"
-            ></span>
-            <span
-              class="absolute w-5 h-0.5 bg-current transition-opacity duration-300 ease-in-out"
-              class:opacity-0={isOpen}
-            ></span>
-            <span
-              class="absolute w-5 h-0.5 bg-current transform transition-all duration-300 ease-in-out"
-              class:-rotate-45={isOpen}
-              class:translate-y-0={isOpen}
-              style="transform: translateY({isOpen ? '0' : '8px'}) {isOpen ? 'rotate(-45deg)' : ''}"
-            ></span>
-          </div>
-        </button>
-      </div> -->
+  
 
       <div class="md:hidden relative z-50">
   <button

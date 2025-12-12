@@ -177,34 +177,7 @@
         {/each}
       </div>
 
-      <!-- Bottom CTA -->
-      <!-- <div 
-        in:fade="{{ duration: 800, delay: 800 }}"
-        class="mt-12 md:mt-16 text-center"
-      >
-        <div class="inline-flex flex-col sm:flex-row items-center gap-4 
-                   p-6 md:p-8 bg-linear-to-r from-[#2E7D32] to-[#77C381]
-                   rounded-2xl shadow-2xl text-white">
-          <div class="flex-1 text-left">
-            <h3 class="text-xl md:text-2xl font-bold mb-2">
-              Ready to experience fair latex trading?
-            </h3>
-            <p class="text-white/90">
-              Join hundreds of satisfied farmers in Kadanad Panchayat
-            </p>
-          </div>
-          
-          <button
-            on:click={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-            class="px-8 py-3 bg-white text-[#2E7D32] rounded-full
-                   font-semibold transition-all duration-300 
-                   transform hover:scale-105 shadow-lg hover:shadow-xl
-                   active:scale-95 whitespace-nowrap"
-          >
-            Get Started Today
-          </button>
-        </div>
-      </div> -->
+  
     {/if}
   </div>
 </section>

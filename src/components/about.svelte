@@ -1,7 +1,7 @@
 <script>
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
-  
+  import barrel from '$lib/assets/barrel.jpeg'; 
   let isVisible = false;
 
   function handleIntersection(node) {
@@ -32,18 +32,19 @@
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-      <!-- Left placeholder area -->
-      <div
-        class="w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl bg-linear-to-br from-emerald-500 via-emerald-600 to-teal-700 relative"
-        aria-hidden="true"
-      >
-        <!-- Decorative pattern overlay -->
-        <div class="w-full h-full rounded-3xl opacity-20" 
-             style="background-image: radial-gradient(circle, white 1.5px, transparent 1.5px); background-size: 30px 30px;">
-        </div>
-        <!-- Gradient overlay for depth -->
-        <div class="absolute inset-0 bg-linear-to-tr from-black/20 to-transparent"></div>
-      </div>
+    
+<div
+  class="w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl relative"
+>
+  <img 
+    src={barrel} 
+    alt="Kodumpidy Latex rubber collection barrels and facility in Kerala"
+    class="w-full h-full object-cover"
+    loading="lazy"
+  />
+  <!-- Optional gradient overlay for depth -->
+  <div class="absolute inset-0 bg-linear-to-tr from-black/10 to-transparent pointer-events-none"></div>
+</div>
 
       <!-- Right content area -->
       <div use:handleIntersection>
