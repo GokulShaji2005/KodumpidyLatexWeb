@@ -6,6 +6,7 @@
   import Location from '../components/location.svelte';
   import Footer from '../components/footer.svelte';
   import FloatingActions from '../components/floatingActions.svelte';
+  import Journey from '../components/journey.svelte';
 </script>
 
 
@@ -18,8 +19,10 @@
   <HeroSection />
   <About />
   <Offer />
+   <Journey />
   <Location />
   <Footer />
   <FloatingActions />
+ 
   <!-- <h2>Welcome to our site!</h2> -->
 </main>
