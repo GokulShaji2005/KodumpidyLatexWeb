@@ -66,185 +66,48 @@
         <p class="text-gray-600 text-lg">Follow the journey from your first call to final payment</p>
       </div>
 
-      <!-- Desktop Journey - Zigzag Pattern -->
+      <!-- Desktop Journey - Professional Horizontal Timeline -->
       <div class="hidden md:block relative">
-        <div class="space-y-8">
-          <!-- Row 1: Step 1 (left) and Step 2 (right) -->
-          <div class="grid grid-cols-2 gap-8 relative">
-            <!-- Step 1 -->
-            <div 
-              class="flex flex-col items-center"
-              in:fly="{{ y: prefersReducedMotion ? 0 : 30, duration: 600, delay: 200 }}"
-              role="article"
-              aria-label="Step 1: {journeySteps[0].title}"
-            >
-              <div class="w-28 h-28 rounded-full bg-white shadow-2xl flex items-center justify-center mb-4 
-                          border-4 border-emerald-400 relative z-10 transform transition-all duration-300 
-                          hover:scale-110 hover:shadow-emerald-400/50">
-                <div class="text-center">
-                  <div class="text-4xl mb-1">{journeySteps[0].icon}</div>
-                  <div class="text-xs font-bold text-emerald-700">STEP 1</div>
-                </div>
-              </div>
-              <div class="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg text-center min-h-[140px] w-full
-                          border-2 border-emerald-200 transform transition-all duration-300 hover:border-emerald-400">
-                <div class="inline-block bg-emerald-600 text-white px-2 py-0.5 rounded text-[10px] font-bold mb-2">
-                  {journeySteps[0].benefit}
-                </div>
-                <h3 class="font-bold text-emerald-800 text-sm mb-2">{journeySteps[0].title}</h3>
-                <p class="text-xs text-gray-600">{journeySteps[0].description}</p>
-              </div>
-            </div>
-
-            <!-- Arrow 1 to 2 (Horizontal Right) -->
-            <div class="absolute top-14 left-1/2 transform -translate-x-1/2 z-0">
-              <svg class="w-16 h-8 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
-              </svg>
-            </div>
-
-            <!-- Step 2 -->
-            <div 
-              class="flex flex-col items-center"
-              in:fly="{{ y: prefersReducedMotion ? 0 : 30, duration: 600, delay: 300 }}"
-              role="article"
-              aria-label="Step 2: {journeySteps[1].title}"
-            >
-              <div class="w-28 h-28 rounded-full bg-white shadow-2xl flex items-center justify-center mb-4 
-                          border-4 border-emerald-400 relative z-10 transform transition-all duration-300 
-                          hover:scale-110 hover:shadow-emerald-400/50">
-                <div class="text-center">
-                  <div class="text-4xl mb-1">{journeySteps[1].icon}</div>
-                  <div class="text-xs font-bold text-emerald-700">STEP 2</div>
-                </div>
-              </div>
-              <div class="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg text-center min-h-[140px] w-full
-                          border-2 border-emerald-200 transform transition-all duration-300 hover:border-emerald-400">
-                <div class="inline-block bg-emerald-600 text-white px-2 py-0.5 rounded text-[10px] font-bold mb-2">
-                  {journeySteps[1].benefit}
-                </div>
-                <h3 class="font-bold text-emerald-800 text-sm mb-2">{journeySteps[1].title}</h3>
-                <p class="text-xs text-gray-600">{journeySteps[1].description}</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Arrow 2 to 3 (Vertical Down) -->
-          <div class="flex justify-end pr-[25%] -my-4">
-            <svg class="w-8 h-12 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/>
-            </svg>
-          </div>
-
-          <!-- Row 2: Step 3 (right) -->
-          <div class="grid grid-cols-2 gap-8">
-            <div></div>
-            <!-- Step 3 -->
-            <div 
-              class="flex flex-col items-center"
-              in:fly="{{ y: prefersReducedMotion ? 0 : 30, duration: 600, delay: 400 }}"
-              role="article"
-              aria-label="Step 3: {journeySteps[2].title}"
-            >
-              <div class="w-28 h-28 rounded-full bg-white shadow-2xl flex items-center justify-center mb-4 
-                          border-4 border-emerald-400 relative z-10 transform transition-all duration-300 
-                          hover:scale-110 hover:shadow-emerald-400/50">
-                <div class="text-center">
-                  <div class="text-4xl mb-1">{journeySteps[2].icon}</div>
-                  <div class="text-xs font-bold text-emerald-700">STEP 3</div>
-                </div>
-              </div>
-              <div class="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg text-center min-h-[140px] w-full
-                          border-2 border-emerald-200 transform transition-all duration-300 hover:border-emerald-400">
-                <div class="inline-block bg-emerald-600 text-white px-2 py-0.5 rounded text-[10px] font-bold mb-2">
-                  {journeySteps[2].benefit}
-                </div>
-                <h3 class="font-bold text-emerald-800 text-sm mb-2">{journeySteps[2].title}</h3>
-                <p class="text-xs text-gray-600 mb-2">{journeySteps[2].description}</p>
-                {#if journeySteps[2].date}
-                  <div class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">
-                    {journeySteps[2].date}
+        <!-- Steps Container -->
+        <div class="relative">
+          <!-- Horizontal Connecting Line -->
+          <div class="absolute top-12 left-0 right-0 h-1 bg-linear-to-r from-emerald-300 via-emerald-400 to-emerald-500 rounded-full" style="margin: 0 5%;"></div>
+          
+          <!-- Steps Grid -->
+          <div class="grid grid-cols-5 gap-4 relative">
+            {#each journeySteps as step, i}
+              <div 
+                class="flex flex-col items-center"
+                in:fly="{{ y: prefersReducedMotion ? 0 : 30, duration: 600, delay: 200 + (i * 100) }}"
+                role="article"
+                aria-label="Step {i + 1}: {step.title}"
+              >
+                <!-- Step Circle -->
+                <div class="w-24 h-24 rounded-full bg-white shadow-2xl flex items-center justify-center mb-4 
+                            border-4 border-emerald-400 relative z-10 transform transition-all duration-300 
+                            hover:scale-110 hover:shadow-emerald-400/50">
+                  <div class="text-center">
+                    <div class="text-3xl mb-1">{step.icon}</div>
+                    <div class="text-[10px] font-bold text-emerald-700">STEP {i + 1}</div>
                   </div>
-                {/if}
-              </div>
-            </div>
-          </div>
-
-          <!-- Arrow 3 to 4 (Horizontal Left) -->
-          <div class="flex justify-center -my-4">
-            <svg class="w-16 h-8 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 4l1.41 1.41L7.83 11H20v2H7.83l5.58 5.59L12 20l-8-8z"/>
-            </svg>
-          </div>
-
-          <!-- Row 3: Step 4 (left) -->
-          <div class="grid grid-cols-2 gap-8">
-            <!-- Step 4 -->
-            <div 
-              class="flex flex-col items-center"
-              in:fly="{{ y: prefersReducedMotion ? 0 : 30, duration: 600, delay: 500 }}"
-              role="article"
-              aria-label="Step 4: {journeySteps[3].title}"
-            >
-              <div class="w-28 h-28 rounded-full bg-white shadow-2xl flex items-center justify-center mb-4 
-                          border-4 border-emerald-400 relative z-10 transform transition-all duration-300 
-                          hover:scale-110 hover:shadow-emerald-400/50">
-                <div class="text-center">
-                  <div class="text-4xl mb-1">{journeySteps[3].icon}</div>
-                  <div class="text-xs font-bold text-emerald-700">STEP 4</div>
                 </div>
-              </div>
-              <div class="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg text-center min-h-[140px] w-full
-                          border-2 border-emerald-200 transform transition-all duration-300 hover:border-emerald-400">
-                <div class="inline-block bg-emerald-600 text-white px-2 py-0.5 rounded text-[10px] font-bold mb-2">
-                  {journeySteps[3].benefit}
-                </div>
-                <h3 class="font-bold text-emerald-800 text-sm mb-2">{journeySteps[3].title}</h3>
-                <p class="text-xs text-gray-600">{journeySteps[3].description}</p>
-              </div>
-            </div>
-            <div></div>
-          </div>
 
-          <!-- Arrow 4 to 5 (Vertical Down) -->
-          <div class="flex justify-start pl-[25%] -my-4">
-            <svg class="w-8 h-12 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/>
-            </svg>
-          </div>
-
-          <!-- Row 4: Step 5 (left) -->
-          <div class="grid grid-cols-2 gap-8">
-            <!-- Step 5 -->
-            <div 
-              class="flex flex-col items-center"
-              in:fly="{{ y: prefersReducedMotion ? 0 : 30, duration: 600, delay: 600 }}"
-              role="article"
-              aria-label="Step 5: {journeySteps[4].title}"
-            >
-              <div class="w-28 h-28 rounded-full bg-white shadow-2xl flex items-center justify-center mb-4 
-                          border-4 border-emerald-400 relative z-10 transform transition-all duration-300 
-                          hover:scale-110 hover:shadow-emerald-400/50">
-                <div class="text-center">
-                  <div class="text-4xl mb-1">{journeySteps[4].icon}</div>
-                  <div class="text-xs font-bold text-emerald-700">STEP 5</div>
-                </div>
-              </div>
-              <div class="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg text-center min-h-[140px] w-full
-                          border-2 border-emerald-200 transform transition-all duration-300 hover:border-emerald-400">
-                <div class="inline-block bg-emerald-600 text-white px-2 py-0.5 rounded text-[10px] font-bold mb-2">
-                  {journeySteps[4].benefit}
-                </div>
-                <h3 class="font-bold text-emerald-800 text-sm mb-2">{journeySteps[4].title}</h3>
-                <p class="text-xs text-gray-600 mb-2">{journeySteps[4].description}</p>
-                {#if journeySteps[4].date}
-                  <div class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">
-                    {journeySteps[4].date}
+                <!-- Step Content Card -->
+                <div class="bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-lg text-center min-h-40 w-full
+                            border-2 border-emerald-200 transform transition-all duration-300 hover:border-emerald-400 hover:shadow-xl">
+                  <div class="inline-block bg-emerald-600 text-white px-2 py-0.5 rounded-full text-[9px] font-bold mb-2">
+                    {step.benefit}
                   </div>
-                {/if}
+                  <h3 class="font-bold text-emerald-800 text-xs mb-1.5 leading-tight">{step.title}</h3>
+                  <p class="text-[11px] text-gray-600 leading-relaxed mb-2">{step.description}</p>
+                  {#if step.date}
+                    <div class="inline-block bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full text-[10px] font-semibold mt-1">
+                      📅 {step.date}
+                    </div>
+                  {/if}
+                </div>
               </div>
-            </div>
-            <div></div>
+            {/each}
           </div>
         </div>
       </div>
