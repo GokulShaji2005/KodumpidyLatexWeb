@@ -29,7 +29,7 @@
       <!-- Main Hero Content -->
       <div class="text-center mb-12" in:fade="{{ duration: 1000, delay: 200 }}">
         <h1 
-          class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight tracking-tight"
+          class="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight"
           style="
             text-shadow: 2px 4px 8px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.5);
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -39,7 +39,7 @@
           Kodumpidy Latex
         </h1>
         <p 
-          class="text-xl md:text-2xl lg:text-3xl text-emerald-100 font-light mb-8 max-w-3xl mx-auto"
+          class="text-xl md:text-2xl lg:text-2xl text-emerald-100 font-light mb-8 max-w-3xl mx-auto"
           style="
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -53,67 +53,61 @@
       <div class="text-center" in:fade="{{ duration: 1000, delay: 400 }}">
         <!-- Trust Indicators -->
         <div class="mb-6 md:mb-8 px-2">
-          <!-- Mobile: Two badges on first row, one centered on second row -->
-          <div class="md:hidden">
-            <!-- First row: Two badges side by side -->
-            <div class="flex  justify-evenly mb-2">
-              <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full shadow-md text-xs">
-                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-emerald-900 font-semibold">Board Licensed</span>
-              </div>
-              <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full shadow-md text-xs">
-                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/>
-                </svg>
-                <span class="text-emerald-900 font-semibold">38+ Years</span>
-              </div>
+          <!-- Mobile: All three badges in one row -->
+          <div class="md:hidden flex justify-center gap-1.5">
+            <div class="inline-flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-md">
+              <svg class="w-3 h-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-emerald-900 font-semibold text-[10px]">Licensed</span>
             </div>
-            <!-- Second row: One badge centered -->
-            <div class="flex justify-center">
-              <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full shadow-md text-xs">
-                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
-                </svg>
-                <span class="text-emerald-900 font-semibold">Trusted by Farmers</span>
-              </div>
+            <div class="inline-flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-md">
+              <svg class="w-3 h-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/>
+              </svg>
+              <span class="text-emerald-900 font-semibold text-[10px]">38+ Years</span>
+            </div>
+            <div class="inline-flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-md">
+              <svg class="w-3 h-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+              </svg>
+              <span class="text-emerald-900 font-semibold text-[10px]">Trusted</span>
             </div>
           </div>
           
           <!-- Desktop: All three badges in a row -->
-          <div class="hidden md:flex flex-wrap justify-center gap-4">
-            <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-full shadow-lg">
-              <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+          <div class="hidden md:flex flex-wrap justify-center gap-2">
+            <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-sm px-2.5 py-1.5 rounded-full shadow-lg">
+              <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-emerald-900 text-base font-semibold">Rubber Board Licensed</span>
+              <span class="text-emerald-900 text-sm font-semibold">Board Licensed</span>
             </div>
-            <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-full shadow-lg">
-              <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+            <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-sm px-2.5 py-1.5 rounded-full shadow-lg">
+              <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/>
               </svg>
-              <span class="text-emerald-900 text-base font-semibold">38+ Years of Service</span>
+              <span class="text-emerald-900 text-sm font-semibold">38+ Years</span>
             </div>
-            <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-full shadow-lg">
-              <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+            <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-sm px-2.5 py-1.5 rounded-full shadow-lg">
+              <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
               </svg>
-              <span class="text-emerald-900 text-base font-semibold">Trusted by Local Farmers</span>
+              <span class="text-emerald-900 text-sm font-semibold">Trusted by Farmers</span>
             </div>
           </div>
         </div>
 
         <a 
           href="#about"
-          class="group inline-flex items-center gap-2 px-6 py-2.5 md:px-10 md:py-4 bg-emerald-600 text-white text-sm md:text-lg font-bold rounded-full 
+          class="group inline-flex items-center gap-1.5 px-4 py-2 md:px-5 md:py-2.5 bg-emerald-600 text-white text-xs md:text-base font-bold rounded-full 
                  hover:bg-emerald-700 transition-all duration-300
                  shadow-2xl hover:shadow-emerald-600/80 transform hover:scale-105
                  focus:outline-none focus:ring-4 focus:ring-emerald-300 focus:ring-offset-2"
           aria-label="Learn more about Kodumpidy Latex services"
         >
-          Learn More About Us
-          <svg class="w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          Learn More
+          <svg class="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </a>
